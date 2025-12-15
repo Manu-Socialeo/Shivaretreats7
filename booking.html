@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Book your Yoga Teacher Training or Retreat at Shiva Yoga Goa. Choose from our comfortable accommodation options and start your journey.">
+    <title>Book Your Stay & Course | Shiva Yoga Goa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Main Style -->
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo-dark.png">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo-dark.png" alt="Shiva Yoga Logo">
+                    <span class="logo-text">Shiva Yoga</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="all-courses.html">Courses</a></li>
+                    <li><a href="index.html#teachers">Teachers</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">FAQ <i class="fas fa-chevron-down"
+                                style="font-size: 10px; margin-left: 3px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="important-info.html">Important Info</a></li>
+                            <li><a href="rules.html">Rules & Regulations</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+
+                            <li><a href="food-accommodation.html">Food & Accommodation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right" style="display: flex; align-items: center; gap: 20px;">
+                <!-- Header Socials Removed -->
+                <div class="header-cta">
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header section-spacing" style="background-color: var(--color-secondary); padding: 80px 0;">
+            <div class="container text-center">
+                <span class="section-subtitle">Begin Your Journey</span>
+                <h1 class="section-title">Book Your Retreat</h1>
+                <p>Secure your spot and accommodation for a life-changing experience.</p>
+            </div>
+        </section>
+
+        <!-- Booking Content -->
+        <section class="section-spacing">
+            <div class="container">
+                <div class="booking-wizard-container">
+                    <!-- Progress Bar -->
+                    <div class="wizard-progress">
+                        <div class="progress-track">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 12px; color: #999;">
+                            <span>Start</span>
+                            <span>Finish</span>
+                        </div>
+                    </div>
+
+                    <form id="bookingWizardForm">
+                        <!-- Step 1: Personal Details -->
+                        <div class="wizard-step-content active" data-step="1">
+                            <div class="wizard-header">
+                                <h3>Personal Details</h3>
+                                <p>Let's get to know you better. Your journey begins here.</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" id="fullName" class="form-control" placeholder="Enter your full name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="your@email.com"
+                                    required>
+                            </div>
+                            <div class="row" style="display: flex; gap: 20px;">
+                                <div class="form-group" style="flex: 1;">
+                                    <label>Country</label>
+                                    <input type="text" id="country" class="form-control" placeholder="Your Country"
+                                        required>
+                                </div>
+                                <div class="form-group" style="flex: 1;">
+                                    <label>WhatsApp Number</label>
+                                    <input type="tel" id="whatsapp" class="form-control" placeholder="+91..." required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select id="gender" class="form-control" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <button type="button" class="cta-button btn-next" onclick="nextStep()">Continue <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+
+                        <!-- Step 2: Course Intent -->
+                        <div class="wizard-step-content" data-step="2">
+                            <div class="wizard-header">
+                                <h3>Choose Your Path</h3>
+                                <p>Which transformative experience are you seeking?</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Course</label>
+                                <select id="courseSelect" class="form-control" onchange="updateFee()" required>
+                                    <option value="">Select a Course...</option>
+                                    <option value="200 Hour TTC">200 Hour Yoga Teacher Training</option>
+                                    <option value="300 Hour TTC">300 Hour Yoga Teacher Training</option>
+                                    <option value="Yoga Retreat">Yoga Retreat (Short Term)</option>
+                                    <option value="Ayurveda Retreat">Ayurveda Retreat</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Start Date</label>
+                                <input type="date" id="startDate" class="form-control" required>
+                                <small style="color: #888;">Courses typically start on the 2nd of each month.</small>
+                            </div>
+                            <button type="button" class="cta-button btn-next" onclick="nextStep()">Next Step</button>
+                            <button type="button" class="cta-button btn-prev" onclick="prevStep()">Back</button>
+                        </div>
+
+                        <!-- Step 3: Stay Type -->
+                        <div class="wizard-step-content" data-step="3">
+                            <div class="wizard-header">
+                                <h3>Stay Preference</h3>
+                                <p>Immerse yourself fully or manage your own stay.</p>
+                            </div>
+                            <div class="form-option-card selected"
+                                onclick="selectOption(this, 'stayType', 'Residential')">
+                                <h4>Residential (Recommended)</h4>
+                                <p>Includes Course + Accommodation + Verified Vegetarian Meals</p>
+                            </div>
+                            <div class="form-option-card" onclick="selectOption(this, 'stayType', 'Non-Residential')">
+                                <h4>Non-Residential</h4>
+                                <p>Course Only. You arrange your own stay & food.</p>
+                            </div>
+                            <input type="hidden" id="stayType" value="Residential">
+                            <button type="button" class="cta-button btn-next" onclick="nextStep()">Next Step</button>
+                            <button type="button" class="cta-button btn-prev" onclick="prevStep()">Back</button>
+                        </div>
+
+                        <!-- Step 4: Accommodation (Conditional) -->
+                        <div class="wizard-step-content" data-step="4">
+                            <div class="wizard-header">
+                                <h3>Accommodation</h3>
+                                <p>Choose your sanctuary for rest and study.</p>
+                            </div>
+                            <div id="accommodationOptions">
+                                <div class="form-option-card"
+                                    onclick="selectOption(this, 'roomType', 'Shared Cottage')">
+                                    <h4>Shared Cottage</h4>
+                                    <p>Twin-sharing comfortable cottage. Connect with peers.</p>
+                                </div>
+                                <div class="form-option-card"
+                                    onclick="selectOption(this, 'roomType', 'Private Cottage')">
+                                    <h4>Private Cottage</h4>
+                                    <p>Your own private space for deep reflection.</p>
+                                </div>
+                            </div>
+                            <input type="hidden" id="roomType" value="">
+                            <button type="button" class="cta-button btn-next" onclick="nextStep()">Next Step</button>
+                            <button type="button" class="cta-button btn-prev" onclick="prevStep()">Back</button>
+                        </div>
+
+                        <!-- Step 5: Fee Summary -->
+                        <div class="wizard-step-content" data-step="5">
+                            <div class="wizard-header">
+                                <h3>Fee Summary</h3>
+                                <p>Transparent pricing for your course.</p>
+                            </div>
+                            <div class="fee-card">
+                                <div class="fee-row">
+                                    <span>Selected Course:</span>
+                                    <span id="summaryCourse">-</span>
+                                </div>
+                                <div class="fee-row">
+                                    <span>Accommodation:</span>
+                                    <span id="summaryRoom">-</span>
+                                </div>
+                                <div class="fee-row total">
+                                    <span>Total Course Fee:</span>
+                                    <span id="totalFee">€0</span>
+                                </div>
+                                <div class="fee-row advance">
+                                    <span>Advance Payable Now:</span>
+                                    <span>€300</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label style="display: flex; align-items: flex-start; gap: 10px;">
+                                    <input type="checkbox" id="termsCheck" style="margin-top: 5px;">
+                                    <span style="font-size: 13px; color: #666;">I understand the fee structure and
+                                        cancellation policy.</span>
+                                </label>
+                            </div>
+                            <button type="button" class="cta-button btn-next" onclick="nextStep()">Proceed to
+                                Payment</button>
+                            <button type="button" class="cta-button btn-prev" onclick="prevStep()">Back</button>
+                        </div>
+
+                        <!-- Step 6: Payment -->
+                        <div class="wizard-step-content" data-step="6">
+                            <div class="wizard-header">
+                                <h3>Secure Your Spot</h3>
+                                <p>A €300 advance is required to reserve your place.</p>
+                            </div>
+
+                            <button type="button" class="cta-button" style="background: #25D366; color: white;"
+                                onclick="togglePaymentInfo()">
+                                <i class="fab fa-google-pay"></i> Make €300 Advance Payment
+                            </button>
+
+                            <div id="paymentInfo" class="payment-info-box">
+                                <p style="margin-bottom: 10px; font-weight: bold;">Google Pay Number</p>
+                                <h2 style="color: var(--color-primary); margin-bottom: 5px;" id="gpayNumber">+91 74119
+                                    24193</h2>
+                                <p style="font-size: 12px; color: #666; margin-bottom: 15px;">Please transfer €300
+                                    (equivalent in INR) to this number.</p>
+
+                                <div class="form-group" style="text-align: left; margin-top: 20px;">
+                                    <label>Upload Payment Screenshot (Optional)</label>
+                                    <input type="file" id="paymentScreenshot" class="form-control" accept="image/*">
+                                    <small style="color: #999;">Or you can share it on WhatsApp later.</small>
+                                </div>
+                            </div>
+
+                            <button type="button" class="cta-button btn-next" style="margin-top: 30px;"
+                                onclick="nextStep()">I Have Made Payment / Will Pay Later</button>
+                            <button type="button" class="cta-button btn-prev" onclick="prevStep()">Back</button>
+                        </div>
+
+                        <!-- Step 7: Finalize -->
+                        <div class="wizard-step-content" data-step="7">
+                            <div class="wizard-header">
+                                <h3>Almost There</h3>
+                                <p>Any additional questions for us?</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Message / Special Requirements</label>
+                                <textarea id="message" class="form-control" rows="4"
+                                    placeholder="Dietary restrictions, injuries, or questions..."></textarea>
+                            </div>
+
+                            <button type="button" class="cta-button btn-next" onclick="sendApplication()">Send
+                                Application <i class="fas fa-paper-plane"></i></button>
+                            <button type="button" class="cta-button btn-prev" onclick="prevStep()">Back</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shiva+Yoga+Goa+Arambol"
+                            target="_blank">
+                            <img src="assets/images/footer-logo-new.jpg" alt="Shiva Yoga Logo"
+                                style="width: 100px; height: 100px; object-fit: contain;">
+                        </a>
+                    </div>
+                    <p>Peace. Balance. Strength. Your journey to wellness starts here.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="https://www.instagram.com/shivayoga.goa" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/16u5TC2qNN/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/@shivaretreats" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tripadvisor.in/Attraction_Review-g2307943-d26266652-Reviews-Shiva_Yoga_Teacher_Training_Goa-Arambol_North_Goa_District_Goa.html"
+                            target="_blank" title="TripAdvisor"><i class="fas fa-plane"></i></a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shiva+Yoga+Goa+Arambol" target="_blank"
+                            title="Location"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="all-courses.html">Courses</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="important-info.html">Important Info</a></li>
+                        <li><a href="rules.html">Rules & Regulations</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="contact.html">Volunteering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Shiva+Yoga+Goa+Arambol"
+                                target="_blank"><i class="fas fa-map-marker-alt"></i> Arambol, Goa, India</a></li>
+                        <li><a href="mailto:contact@shivaretreats.com?cc=contact@shivaretreats.com" target="_blank"><i
+                                    class="fas fa-envelope"></i> contact@shivaretreats.com</a></li>
+                        <li><a href="tel:+917892426855"><i class="fas fa-phone-alt"></i> +91 78924 26855</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom"
+                style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px;">
+                <div class="copyright">
+                    &copy; 2026 Shiva Yoga Goa. All Rights Reserved. &nbsp;|&nbsp;
+                </div>
+                <div class="footer-credits" style="display: flex; align-items: center; gap: 10px;">
+                    <a href="https://wa.me/918722163256?text=Hi%20i%20would%20like%20to%20get%20my%20website%20build%20by%20socialeo"
+                        target="_blank" class="footer-text-link">
+                        Designed by Socialeo
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="#" class="footer-text-link"><i class="fas fa-lock"></i> Admin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // --- Inventory & Booking Logic ---
+
+        // Load Inventory from Admin Settings
+        function getInventoryStatus(dateStr) {
+            const inventory = JSON.parse(localStorage.getItem('shivaInventory')) || {};
+            // Default to 'available' if not set
+            return inventory[dateStr] || 'available';
+        }
+
+        // Check Availability when Date Changes
+        function checkAvailability() {
+            const dateSelect = document.getElementById('courseDate');
+            const selectedDate = dateSelect.value;
+            const payBtn = document.getElementById('payBtn');
+            const closedMsg = document.getElementById('closedMsg');
+            const statusLabel = document.getElementById('availabilityStatus');
+            const enquiryBtn = document.getElementById('enquiryBtn');
+
+            if (!selectedDate) {
+                payBtn.style.display = 'none';
+                closedMsg.style.display = 'none';
+                statusLabel.innerText = '';
+                return;
+            }
+
+            const status = getInventoryStatus(selectedDate);
+
+            // UI Updates based on Status
+            if (status === 'closed') {
+                payBtn.style.display = 'none';
+                closedMsg.style.display = 'block';
+                statusLabel.innerText = 'Status: Sold Out';
+                statusLabel.style.color = 'red';
+                enquiryBtn.innerText = "Join Waitlist / Enquiry";
+            } else {
+                closedMsg.style.display = 'none';
+                payBtn.style.display = 'flex'; // Show Payment Button
+                enquiryBtn.innerText = "Send Enquiry Only";
+
+                if (status === 'filling_fast') {
+                    statusLabel.innerText = 'Status: Filling Fast!';
+                    statusLabel.style.color = '#f57f17'; // Dark Yellow
+                } else if (status === 'last_2') {
+                    statusLabel.innerText = 'Status: Last 2 Spots!';
+                    statusLabel.style.color = '#e65100'; // Orange
+                } else {
+                    statusLabel.innerText = 'Status: Available';
+                    statusLabel.style.color = 'green';
+                }
+            }
+
+            updateTotalFee();
+        }
+
+        // Fee Calculator
+        function updateTotalFee() {
+            const accommodation = document.getElementById('accommodation-type').value;
+            const feeDisplay = document.getElementById('total-fee');
+
+            let baseFee = 0;
+            if (accommodation === 'residential') {
+                baseFee = 1100; // Base Euro price
+            } else if (accommodation === 'non-residential') {
+                baseFee = 600;
+            }
+
+            if (baseFee > 0) {
+                feeDisplay.innerText = 'â‚¬' + baseFee;
+            } else {
+                feeDisplay.innerText = 'â‚¬0';
+            }
+        }
+
+        // Attach listeners
+        document.getElementById('accommodation-type').addEventListener('change', updateTotalFee);
+
+        // Process Payment (WhatsApp)
+        function processPayment() {
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('courseDate').value;
+            const accommodation = document.getElementById('accommodation-type').value;
+
+            if (!name || !date || !accommodation) {
+                alert("Please fill in your Name, Date, and Accommodation type first.");
+                return;
+            }
+
+            const confirmMsg = "Do you want to proceed to payment?\n\nYou will be redirected to WhatsApp to send the payment screenshot.\nUPI Number: +91 74119 24193\nAmount: &#8377;27,000 (Advance)";
+
+            if (confirm(confirmMsg)) {
+                // Construct WhatsApp Message
+                const text = `Namaste! I want to book my spot.\n\nName: ${name}\nDate: ${date}\nType: ${accommodation}\n\nI am sending the advance payment screenshot now.`;
+                const encodedText = encodeURIComponent(text);
+                const waUrl = `https://wa.me/917411924193?text=${encodedText}`;
+
+                window.open(waUrl, '_blank');
+            }
+        }
+
+        // Handle Form Submission (Enquiry)
+        function handleBooking(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            // Simple alert for now - in production this would go to a backend
+            alert("Thank you for your enquiry, " + data.name + "! We will contact you shortly at " + data.email);
+            // Optionally redirect or clear form
+        }
+
+        // Initialize on load
+        window.onload = function () {
+            checkAvailability(); // Run once to set initial state
+        };
+    </script>
+</body>
+
+</html>

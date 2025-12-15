@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Shiva Yoga Goa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .inventory-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .inventory-status {
+            margin-top: 15px;
+        }
+
+        .status-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .status-btn.active {
+            font-weight: bold;
+            border: 2px solid #333;
+        }
+
+        .status-green {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status-yellow {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .status-orange {
+            background-color: #ffeeba;
+            color: #856404;
+        }
+
+        /* Orange-ish */
+        .status-red {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        /* Orange is tricky in standard Bootstrap colors, using custom */
+        .status-btn[data-status="orange"] {
+            background-color: #ffcc99;
+            color: #856404;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo-dark.png" alt="Shiva Yoga Logo">
+                    <span class="logo-text">Shiva Yoga Goa</span>
+                </a>
+            </div>
+            <h1>Admin Dashboard</h1>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <h2>Accommodation Inventory Management</h2>
+        <p>Manage availability status for upcoming dates. Updates reflect on the Booking page.</p>
+
+        <div class="dashboard-grid" id="inventoryGrid">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <script>
+        const dates = [
+            "2nd - 25th Jan 2025", "2nd - 27th Feb 2025", "2nd - 27th Mar 2025",
+            "2nd - 26th Apr 2025", "2nd - 27th May 2025", "2nd - 26th June 2025",
+            "2nd - 27th July 2025", "2nd - 26th Aug 2025", "2nd - 26th Sept 2025",
+            "2nd - 27th Oct 2025", "2nd - 26th Nov 2025", "2nd - 27th Dec 2025"
+        ];
+
+        const statuses = [
+            { id: 'avl', label: 'Available', color: 'status-green' },
+            { id: 'filling', label: 'Filling Fast', color: 'status-yellow' },
+            { id: 'last2', label: 'Last 2 Available', color: 'status-orange' },
+            { id: 'closed', label: 'Closed', color: 'status-red' }
+        ];
+
+        const grid = document.getElementById('inventoryGrid');
+
+        // Load saved state or default
+        const inventory = JSON.parse(localStorage.getItem('shivaInventory') || '{}');
+
+        dates.forEach((date, index) => {
+            const card = document.createElement('div');
+            card.className = 'inventory-card';
+
+            const title = document.createElement('h3');
+            title.textContent = date;
+            card.appendChild(title);
+
+            const statusContainer = document.createElement('div');
+            statusContainer.className = 'inventory-status';
+
+            const currentStatus = inventory[date] || 'avl';
+
+            statuses.forEach(status => {
+                const btn = document.createElement('button');
+                btn.className = `status-btn ${status.color} ${currentStatus === status.id ? 'active' : ''}`;
+                btn.textContent = status.label;
+                btn.onclick = () => {
+                    // Update UI
+                    card.querySelectorAll('.status-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    // Save
+                    inventory[date] = status.id;
+                    localStorage.setItem('shivaInventory', JSON.stringify(inventory));
+                    alert(`Updated ${date} to ${status.label}`);
+                };
+                statusContainer.appendChild(btn);
+            });
+
+            card.appendChild(statusContainer);
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,689 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shiva Yoga Goa offers certified Yoga Teacher Training (200hr, 300hr TTC) and rejuvenating yoga retreats in the heart of Goa, India. Join us for a transformative journey.">
+    <title>Shiva Yoga - Yoga Studio & Fitness</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Main Style -->
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo-dark.png">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo-dark.png" alt="Shiva Yoga Logo">
+                    <span class="logo-text">Shiva Yoga</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="all-courses.html">Courses</a></li>
+                    <li><a href="index.html#teachers">Teachers</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">FAQ <i class="fas fa-chevron-down"
+                                style="font-size: 10px; margin-left: 3px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="important-info.html">Important Info</a></li>
+                            <li><a href="rules.html">Rules & Regulations</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+
+                            <li><a href="food-accommodation.html">Food & Accommodation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right" style="display: flex; align-items: center; gap: 20px;">
+                <!-- Header Socials Removed -->
+                <div class="header-cta">
+                    <a href="booking.html" class="btn"
+                        style="background: white; border: 2px solid #d4a574; color: #d4a574; padding: 10px 25px; border-radius: 50px; transition: 0.3s;">Book
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-bg-slideshow">
+                <div class="hero-slide active" style="background-image: url('assets/images/hero-new-1.jpg');">
+                </div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-new-2.jpg');">
+                </div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-new-3.png');">
+                </div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-new-4.jpg');">
+                </div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-new-5.jpg');">
+                </div>
+            </div>
+            <!-- White Overlay for Text Visibility -->
+            <div class="hero-overlay"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.7); z-index: 0;">
+            </div>
+
+            <div class="hero-content container" style="position: relative; z-index: 1;">
+                <h1 style="color: #333; text-shadow: none;">Find Your Inner Peace</h1>
+                <p style="color: #444; text-shadow: none;">Join our transformative Yoga Teacher Training and Retreats in
+                    the heart of Goa.</p>
+                <div class="hero-buttons">
+                    <a href="booking.html" class="btn btn-primary">Book Your Stay</a>
+                    <a href="all-courses.html" class="btn btn-secondary btn-outline-visible">Explore Courses</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accreditions / Certificate Section (Bigger) -->
+        <section class="accreditations-bar"
+            style="background: #fff; padding: 60px 0; border-bottom: 1px solid #eee; text-align: center;">
+            <div class="container">
+                <h3 style="margin-bottom: 30px; color: #555; font-family: var(--font-heading);">Accredited By</h3>
+                <img src="assets/images/yoga-alliance-usa.png" alt="Yoga Alliance Certification"
+                    style="height: 120px; max-width: 100%; opacity: 1; display: block; margin: 0 auto;">
+            </div>
+        </section>
+
+        <!-- Removed "Teamed up with" Stats Section -->
+        <!-- Classes Section -->
+        <section id="courses" class="classes-section section-spacing">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Our Yoga Courses</h2>
+                    <p class="hero-text" style="margin: 0 auto 50px; color: var(--color-text);">Comprehensive Teacher
+                        Training and Retreats in the heart of Goa.</p>
+                </div>
+
+                <div class="classes-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+                    <!-- Course 1: 200 Hr -->
+                    <div class="class-card">
+                        <div class="class-icon"><i class="fas fa-om"></i></div>
+                        <h3>YTTC 200 Hrs</h3>
+                        <p>21 Day Hatha, Ashtanga, Vinyasa Yoga Teacher Training. The perfect foundation.</p>
+                        <a href="courses/200-hr-ttc.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    <!-- Course 2: 300 Hr -->
+                    <div class="class-card">
+                        <div class="class-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>YTTC 300 Hrs</h3>
+                        <p>Advanced 28-day training including Yin Yoga, Ayurveda & Panchakarma integration.</p>
+                        <a href="courses/300-hr-ttc.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    <!-- Course 3: Shiva Yoga Retreats -->
+                    <div class="class-card">
+                        <div class="class-icon"><i class="fas fa-spa"></i></div>
+                        <h3>Shiva Yoga Retreats</h3>
+                        <p>Rejuvenate your soul with our 11-day retreats or 100-hour intensive immersion.</p>
+                        <a href="courses/yoga-retreats.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    <!-- Course 4: Ayurveda Retreat -->
+                    <div class="class-card">
+                        <div class="class-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Ayurveda Retreat</h3>
+                        <p>Discover the ancient healing science of Ayurveda and Panchakarma therapies.</p>
+                        <a href="courses/ayurveda.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    <!-- Course 5: One Day Retreat -->
+                    <!-- Hidden - Available in "View All Courses" page
+                    <div class="class-card">
+                        <div class="class-icon"><i class="fas fa-sun"></i></div>
+                        <h3>One Day Retreat</h3>
+                        <p>Experience a full day of wellness, yoga, and healthy meals. A perfect mini-escape.</p>
+                        <a href="courses/one-day-retreat.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    -->
+                    <!-- Course 6: Yin Yoga TTC (6 Days) -->
+                    <!-- Hidden - Available in "View All Courses" page
+                    <div class="class-card">
+                        <div class="class-icon"><i class="fas fa-moon"></i></div>
+                        <h3>Yin Yoga TTC (6 Days)</h3>
+                        <p>Specialized 6-day training focusing on deep connective tissues and meditative practice.</p>
+                        <a href="courses/yin-yoga-ttc.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    -->
+                    <!-- Course 7: Monthly Yoga & Stay -->
+                    <!-- Hidden - Available in "View All Courses" page
+                    <div class="class-card">
+                        <div class="class-icon"><i class="fas fa-home"></i></div>
+                        <h3>Monthly Yoga & Stay</h3>
+                        <p>Live, breathe, and practice in our community. Includes accommodation and unlimited classes.
+                        </p>
+                        <a href="courses/monthly-yoga.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    -->
+                    <!-- Course 8: Flexible TTC -->
+                    <!-- Hidden - Available in "View All Courses" page
+                    <div class="class-card">
+                        <div class="class-icon"><i class="far fa-calendar-alt"></i></div>
+                        <h3>Flexible TTC</h3>
+                        <p>Complete your teacher training at your own pace. Perfect for busy schedules.</p>
+                        <a href="courses/flexible-ttc.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    -->
+                    <!-- Course 9: 28 Days 250 Hrs -->
+                    <!-- Hidden - Available in "View All Courses" page
+                    <div class="class-card">
+                        <div class="class-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <h3>28 Days - 250 Hrs</h3>
+                        <p>An intensive bridge course for extended learning and deeper practice.</p>
+                        <a href="courses/250-hr-ttc.html" class="btn"
+                            style="margin-top:15px; font-size:12px; padding:8px 20px;">View Details</a>
+                    </div>
+                    -->
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="all-courses.html" class="btn btn-secondary">View All Courses</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section section-spacing" style="background-color: var(--color-secondary);">
+            <div class="container about-container">
+                <div class="about-content">
+                    <span class="section-subtitle">About Shiva Yoga</span>
+                    <h2 class="section-title">Where Strength Meets Inner Calm</h2>
+                    <p style="margin-bottom: 30px;">At Shiva Yoga, we cultivate balance between physical vitality and
+                        emotional serenity through modern yoga practice.</p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-award"></i></div>
+                            <div>
+                                <h3>Shiva Yoga Leads Wellness</h3>
+                                <p>We set the standard in mindful yoga and personal growth.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <div>
+                                <h3>Trusted By Many</h3>
+                                <p>Shiva Yoga is chosen for quality, care, and transformation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn" style="margin-top: 30px;">Learn More</a>
+                </div>
+
+                <div class="about-video">
+                    <img src="assets/images/gallery-14.jpg" alt="About Shiva Yoga"
+                        style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Teachers Section -->
+        <section id="teachers" class="teachers-section section-spacing"
+            style="background-color: white; position: relative;">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 60px;">
+                    <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 13px; margin-bottom: 10px;">
+                        LOOKING AT BEAUTY IN THE WORLD, IS THE FIRST STEP OF PURIFYING THE MIND</p>
+                    <h2 class="section-title" style="font-size: 48px; margin-bottom: 0;">OUR TEACHERS</h2>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="teacher-nav-btn teacher-prev" onclick="scrollSection('teachers-carousel', -600)"
+                    style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 2px solid #d4a574; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s;">
+                    <i class="fas fa-chevron-left" style="color: #d4a574; font-size: 20px;"></i>
+                </button>
+                <button class="teacher-nav-btn teacher-next" onclick="scrollSection('teachers-carousel', 600)"
+                    style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 2px solid #d4a574; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s;">
+                    <i class="fas fa-chevron-right" style="color: #d4a574; font-size: 20px;"></i>
+                </button>
+
+                <!-- Teachers Carousel -->
+                <div id="teachers-carousel" class="teachers-carousel"
+                    style="display: flex; gap: 40px; overflow-x: auto; scroll-behavior: smooth; padding: 20px 60px; scrollbar-width: none; -ms-overflow-style: none;">
+
+                    <!-- Teacher Card 1: Shivayogi -->
+                    <div class="teacher-card-new"
+                        style="min-width: 550px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative;">
+                        <div
+                            style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                            <i class="fas fa-om" style="color: #d4a574; font-size: 28px;"></i>
+                        </div>
+                        <div style="display: flex; height: 400px;">
+                            <!-- Photo Section - Full Scale -->
+                            <div style="flex: 0 0 45%; overflow: hidden;">
+                                <img src="assets/images/shiva-yogi.avif" alt="Shivayogi"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <!-- Content Section -->
+                            <div
+                                style="flex: 1; background: #f5f1e8; padding: 50px 30px 30px 30px; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="font-size: 24px; margin-bottom: 5px; color: #2a2a2a; font-weight: 600;">
+                                    Shivayogi</h3>
+                                <p
+                                    style="color: #d4a574; font-weight: 600; margin-bottom: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Hatha Vinyasa, Alignment & Mantra</p>
+                                <p
+                                    style="font-style: italic; color: #6b5d52; margin-bottom: 15px; line-height: 1.5; font-size: 13px;">
+                                    "This barefoot yogi's passion for yogic life creates a unique teaching style."</p>
+                                <p style="color: #6b5d52; line-height: 1.6; font-size: 13px; margin-bottom: 10px;">This
+                                    barefoot yogi's passion for yogic life and his free-spirited nature create a unique
+                                    and authentic teaching style that will leave you feeling energized.</p>
+                                <a href="#"
+                                    style="color: #d4a574; font-size: 12px; margin-top: 10px; text-decoration: none; font-weight: 600;">Read
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 2: Vinitha -->
+                    <div class="teacher-card-new"
+                        style="min-width: 550px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative;">
+                        <div
+                            style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                            <i class="fas fa-om" style="color: #d4a574; font-size: 28px;"></i>
+                        </div>
+                        <div style="display: flex; height: 400px;">
+                            <div style="flex: 0 0 45%; overflow: hidden;">
+                                <img src="assets/images/vinnie.avif" alt="Vinitha"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div
+                                style="flex: 1; background: #f5f1e8; padding: 50px 30px 30px 30px; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="font-size: 24px; margin-bottom: 5px; color: #2a2a2a; font-weight: 600;">
+                                    Vinitha</h3>
+                                <p
+                                    style="color: #d4a574; font-weight: 600; margin-bottom: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Ashtanga, Pranayama & Philosophy</p>
+                                <p
+                                    style="font-style: italic; color: #6b5d52; margin-bottom: 15px; line-height: 1.5; font-size: 13px;">
+                                    "She seamlessly blends traditional and modern yoga practices."</p>
+                                <p style="color: #6b5d52; line-height: 1.6; font-size: 13px; margin-bottom: 10px;">She
+                                    seamlessly blends
+                                    traditional and modern yoga practices to create a fun and well-rounded approach to
+                                    yoga, inspiring to move, breathe, and flow with ease.</p>
+                                <a href="#"
+                                    style="color: #d4a574; font-size: 12px; margin-top: 10px; text-decoration: none; font-weight: 600;">Read
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 3: Anuradha -->
+                    <div class="teacher-card-new"
+                        style="min-width: 550px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative;">
+                        <div
+                            style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                            <i class="fas fa-om" style="color: #d4a574; font-size: 28px;"></i>
+                        </div>
+                        <div style="display: flex; height: 400px;">
+                            <div style="flex: 0 0 45%; overflow: hidden;">
+                                <img src="assets/images/anuradha.avif" alt="Anuradha"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div
+                                style="flex: 1; background: #f5f1e8; padding: 50px 30px 30px 30px; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="font-size: 24px; margin-bottom: 5px; color: #2a2a2a; font-weight: 600;">
+                                    Anuradha</h3>
+                                <p
+                                    style="color: #d4a574; font-weight: 600; margin-bottom: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Management & Meditation Teacher</p>
+                                <p
+                                    style="font-style: italic; color: #6b5d52; margin-bottom: 15px; line-height: 1.5; font-size: 13px;">
+                                    "Guiding students into stillness with grace."</p>
+                                <p style="color: #6b5d52; line-height: 1.6; font-size: 13px; margin-bottom: 10px;">She
+                                    is a meditation teacher
+                                    and part of the management team, known for guiding students into stillness while
+                                    supporting the smooth running of the center.</p>
+                                <a href="#"
+                                    style="color: #d4a574; font-size: 12px; margin-top: 10px; text-decoration: none; font-weight: 600;">Read
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 4: Akshata D -->
+                    <div class="teacher-card-new"
+                        style="min-width: 550px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative;">
+                        <div
+                            style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                            <i class="fas fa-om" style="color: #d4a574; font-size: 28px;"></i>
+                        </div>
+                        <div style="display: flex; height: 400px;">
+                            <div style="flex: 0 0 45%; overflow: hidden;">
+                                <img src="assets/images/akshata-d.avif" alt="Akshata D"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div
+                                style="flex: 1; background: #f5f1e8; padding: 50px 30px 30px 30px; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="font-size: 24px; margin-bottom: 5px; color: #2a2a2a; font-weight: 600;">
+                                    Akshata D</h3>
+                                <p
+                                    style="color: #d4a574; font-weight: 600; margin-bottom: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Philosophy & Ayurveda</p>
+                                <p
+                                    style="font-style: italic; color: #6b5d52; margin-bottom: 15px; line-height: 1.5; font-size: 13px;">
+                                    "Integrating profound wisdom with holistic healing."</p>
+                                <p style="color: #6b5d52; line-height: 1.6; font-size: 13px; margin-bottom: 10px;">With
+                                    her knowledge of
+                                    Philosophy and Ayurveda, integrates profound existential inquiries with practical
+                                    holistic healing approaches to nurture self-awareness and balance.</p>
+                                <a href="#"
+                                    style="color: #d4a574; font-size: 12px; margin-top: 10px; text-decoration: none; font-weight: 600;">Read
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 5: Irina -->
+                    <div class="teacher-card-new"
+                        style="min-width: 550px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative;">
+                        <div
+                            style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                            <i class="fas fa-om" style="color: #d4a574; font-size: 28px;"></i>
+                        </div>
+                        <div style="display: flex; height: 400px;">
+                            <div style="flex: 0 0 45%; overflow: hidden;">
+                                <img src="assets/images/irina.avif" alt="Irina"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div
+                                style="flex: 1; background: #f5f1e8; padding: 50px 30px 30px 30px; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="font-size: 24px; margin-bottom: 5px; color: #2a2a2a; font-weight: 600;">
+                                    Irina</h3>
+                                <p
+                                    style="color: #d4a574; font-weight: 600; margin-bottom: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Sound Healing, Yin</p>
+                                <p
+                                    style="font-style: italic; color: #6b5d52; margin-bottom: 15px; line-height: 1.5; font-size: 13px;">
+                                    "Using sound and vibration for deep healing."</p>
+                                <p style="color: #6b5d52; line-height: 1.6; font-size: 13px; margin-bottom: 10px;">Meet
+                                    our incredible sound
+                                    healer, who uses the power of sound and vibration to facilitate deep healing and
+                                    relaxation while creating a peaceful and calming environment.</p>
+                                <a href="#"
+                                    style="color: #d4a574; font-size: 12px; margin-top: 10px; text-decoration: none; font-weight: 600;">Read
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 6: Ritesh -->
+                    <div class="teacher-card-new"
+                        style="min-width: 550px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative;">
+                        <div
+                            style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                            <i class="fas fa-om" style="color: #d4a574; font-size: 28px;"></i>
+                        </div>
+                        <div style="display: flex; height: 400px;">
+                            <div style="flex: 0 0 45%; overflow: hidden;">
+                                <img src="assets/images/ritesh.avif" alt="Ritesh"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div
+                                style="flex: 1; background: #f5f1e8; padding: 50px 30px 30px 30px; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="font-size: 24px; margin-bottom: 5px; color: #2a2a2a; font-weight: 600;">
+                                    Ritesh</h3>
+                                <p
+                                    style="color: #d4a574; font-weight: 600; margin-bottom: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Philosophy, Pranayama, Anatomy</p>
+                                <p
+                                    style="font-style: italic; color: #6b5d52; margin-bottom: 15px; line-height: 1.5; font-size: 13px;">
+                                    "Promoting healing through asanas and balance."</p>
+                                <p style="color: #6b5d52; line-height: 1.6; font-size: 13px; margin-bottom: 10px;">A
+                                    skilled yoga teacher in
+                                    Philosophy, Pranayama, and Ayurveda he promotes healing through asanas, inspiring
+                                    students to find balance and peace.</p>
+                                <a href="#"
+                                    style="color: #d4a574; font-size: 12px; margin-top: 10px; text-decoration: none; font-weight: 600;">Read
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 7: Pallavi -->
+                    <div class="teacher-card-new"
+                        style="min-width: 550px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative;">
+                        <div
+                            style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                            <i class="fas fa-om" style="color: #d4a574; font-size: 28px;"></i>
+                        </div>
+                        <div style="display: flex; height: 400px;">
+                            <div style="flex: 0 0 45%; overflow: hidden;">
+                                <img src="assets/images/pallavi.avif" alt="Pallavi"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div
+                                style="flex: 1; background: #f5f1e8; padding: 50px 30px 30px 30px; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="font-size: 24px; margin-bottom: 5px; color: #2a2a2a; font-weight: 600;">
+                                    Pallavi</h3>
+                                <p
+                                    style="color: #d4a574; font-weight: 600; margin-bottom: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Hatha Yoga, Yin, Anatomy, Management</p>
+                                <p
+                                    style="font-style: italic; color: #6b5d52; margin-bottom: 15px; line-height: 1.5; font-size: 13px;">
+                                    "Dynamic classes building strength and awareness."</p>
+                                <p style="color: #6b5d52; line-height: 1.6; font-size: 13px; margin-bottom: 10px;">
+                                    Pallavi Ji is a passionate
+                                    yoga teacher specializing in Hatha Yoga, Yin, Anatomy, and Pranayama. Her dynamic
+                                    classes build strength, enhance mobility, and deepen mind-body awareness.</p>
+                                <a href="#"
+                                    style="color: #d4a574; font-size: 12px; margin-top: 10px; text-decoration: none; font-weight: 600;">Read
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 8: Self-learning -->
+                    <div class="teacher-card-new"
+                        style="min-width: 550px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); position: relative;">
+                        <div
+                            style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+                            <i class="fas fa-om" style="color: #d4a574; font-size: 28px;"></i>
+                        </div>
+                        <div style="display: flex; height: 400px;">
+                            <div style="flex: 0 0 45%; overflow: hidden;">
+                                <img src="assets/images/consciousness.avif" alt="Consciousness"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div
+                                style="flex: 1; background: #f5f1e8; padding: 50px 30px 30px 30px; display: flex; flex-direction: column; justify-content: center;">
+                                <h3 style="font-size: 24px; margin-bottom: 5px; color: #2a2a2a; font-weight: 600;">
+                                    Self-learning</h3>
+                                <p
+                                    style="color: #d4a574; font-weight: 600; margin-bottom: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Consciousness</p>
+                                <p
+                                    style="font-style: italic; color: #6b5d52; margin-bottom: 15px; line-height: 1.5; font-size: 13px;">
+                                    "Cultivating awareness and inner wisdom."</p>
+                                <p style="color: #6b5d52; line-height: 1.6; font-size: 13px; margin-bottom: 10px;">By
+                                    cultivating consciousness
+                                    through mindfulness and awareness, this inner teacher can help navigating life with
+                                    greater clarity, compassion, and wisdom.</p>
+                                <a href="#"
+                                    style="color: #d4a574; font-size: 12px; margin-top: 10px; text-decoration: none; font-weight: 600;">Read
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hide scrollbar -->
+                <style>
+                    #teachers-carousel::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    .teacher-nav-btn:hover {
+                        background: #d4a574 !important;
+                    }
+
+                    .teacher-nav-btn:hover i {
+                        color: white !important;
+                    }
+
+                    .header-cta .btn:hover {
+                        background: #d4a574 !important;
+                        color: white !important;
+                    }
+                </style>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section section-spacing"
+            style="background-color: var(--color-background-alt);">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-subtitle">Our Gallery</span>
+                    <h2 class="section-title">Glimpses of Shiva Yoga</h2>
+                    <p style="margin: 0 auto 50px; max-width: 600px;">Capture the moments of peace, learning, and
+                        transformation.</p>
+                </div>
+
+                <div id="gallery-scroll" class="gallery-grid"
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 40px;">
+                    <!-- Showing only first 3 images -->
+                    <div class="gallery-item"><img src="assets/images/gallery-14.jpg" alt="Shiva Yoga Gallery"></div>
+                    <div class="gallery-item"><img src="assets/images/gallery-15.png" alt="Shiva Yoga Gallery"></div>
+                    <div class="gallery-item"><img src="assets/images/gallery-18.jpg" alt="Shiva Yoga Gallery"></div>
+                </div>
+
+                <div class="text-center">
+                    <a href="gallery.html" class="btn btn-secondary">View All Gallery</a>
+                </div>
+
+                <!-- Hidden images - Available in gallery.html
+                <div class="gallery-item"><img src="assets/images/gallery-25.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-26.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-28.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-30.png" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-33.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-35.png" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-40.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-42.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-43.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-44.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-45.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-46.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-51.jpg" alt="Shiva Yoga Gallery"></div>
+                <div class="gallery-item"><img src="assets/images/gallery-52.jpg" alt="Shiva Yoga Gallery"></div>
+                -->
+                <!-- Accreditation Section -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shiva+Yoga+Goa+Arambol"
+                            target="_blank">
+                            <img src="assets/images/footer-logo-new.jpg" alt="Shiva Yoga Logo"
+                                style="width: 100px; height: 100px; object-fit: contain;">
+                        </a>
+                    </div>
+                    <p>Peace. Balance. Strength. Your journey to wellness starts here.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="https://www.instagram.com/shivayoga.goa" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/16u5TC2qNN/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/@shivaretreats" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tripadvisor.in/Attraction_Review-g2307943-d26266652-Reviews-Shiva_Yoga_Teacher_Training_Goa-Arambol_North_Goa_District_Goa.html"
+                            target="_blank" title="TripAdvisor"><i class="fas fa-plane"></i></a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shiva+Yoga+Goa+Arambol" target="_blank"
+                            title="Location"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="all-courses.html">Courses</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="important-info.html">Important Info</a></li>
+                        <li><a href="rules.html">Rules & Regulations</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="contact.html">Volunteering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Shiva+Yoga+Goa+Arambol"
+                                target="_blank"><i class="fas fa-map-marker-alt"></i> Arambol, Goa, India</a></li>
+                        <li><a href="mailto:contact@shivaretreats.com?cc=contact@shivaretreats.com" target="_blank"><i
+                                    class="fas fa-envelope"></i> contact@shivaretreats.com</a></li>
+                        <li><a href="tel:+917892426855"><i class="fas fa-phone-alt"></i> +91 78924 26855</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom"
+                style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px;">
+                <div class="copyright">
+                    &copy; 2026 Shiva Yoga Goa. All Rights Reserved. &nbsp;|&nbsp;
+                </div>
+                <div class="footer-credits" style="display: flex; align-items: center; gap: 10px;">
+                    <a href="https://wa.me/918722163256?text=Hi%20i%20would%20like%20to%20get%20my%20website%20build%20by%20socialeo"
+                        target="_blank" class="footer-text-link">
+                        Designed by Socialeo
+                    </a>
+                    &nbsp;|&nbsp;
+                    <a href="#" class="footer-text-link"><i class="fas fa-lock"></i> Admin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
